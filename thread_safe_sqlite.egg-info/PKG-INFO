@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: thread-safe-sqlite
+Version: 0.0.1
+Summary: A thread safe DSL for sqlite3.
+Home-page: https://github.com/josharnoldjosh/thread_safe_sqlite
+Author: Josh Arnold
+Author-email: dev@josharnold.me
+License: MIT
+Description: A DSL wrapper for Palantir's threadsafe sqlite implementation.
+Keywords: Sqlite3,Thread,Safe,DSL,Wrapper
+Platform: UNKNOWN
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown

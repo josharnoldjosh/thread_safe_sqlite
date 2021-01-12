@@ -16,7 +16,7 @@ setup_args = dict(
     author_email='dev@josharnold.me',
     keywords=['Sqlite3', 'Thread', 'Safe', 'DSL', 'Wrapper'],
     python_requires='>=3.6',
-    # url='https://github.com/ncthuc/elastictools',    
+    url='https://github.com/josharnoldjosh/thread_safe_sqlite',    
 )
 
 install_requires = [    
