@@ -1,0 +1,1 @@
+A DSL wrapper for Palantir's threadsafe sqlite implementation.
