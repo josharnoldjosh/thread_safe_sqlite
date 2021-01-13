@@ -16,7 +16,7 @@ First, let's import some modules.
 
 ```python
 from db_by_josh.schema import Database
-from db_by_josh.schema import Schema, Column
+from db_by_josh.schema import Schema, Table, Column
 from db_by_josh.query import Query
 ```
 
