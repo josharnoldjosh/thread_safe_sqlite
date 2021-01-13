@@ -1,8 +1,6 @@
-A DSL wrapper & threadsafe sqlite implementation.
-
 ---
 
-If you ever need a light-weight database wrapper for python that's also thread-safe, look no further.
+A DSL wrapper & threadsafe sqlite implementation.
 
 ---
 
@@ -14,7 +12,7 @@ Its as easy as:
 
 ## Usage
 
-First, lets import some modules.
+First, let's import some modules.
 
 ```python
 from db_by_josh import (
@@ -27,7 +25,7 @@ from db_by_josh import (
 
 ### Creating a schema
 
-Instead of worrying doing `CREATE TABLE`, etc, why not create a schema object?
+Instead of worrying about doing `CREATE TABLE`, etc, why not just create a schema object? A schema refers to a single database `.sqlite` file.
 
 ```python
 db_schema = schema.Schema("my_database")
