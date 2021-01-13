@@ -92,4 +92,19 @@ If the framework doesn't support your required logic, just call `.db.execute` on
 result = my_database_reference.db.excecute("<MY SQL QUERY HERE>")
 ```
 
+### A Few More Example Queries
+
+Updating a value in your database.
+
+```python
+# Update a user's password where username = "Josh"
+q = Query().update("User").set("password").equals("new password value").where("username").equals("Josh")
+```
+
+Deleting a row in your database.
+
+```python
+# Delete a user who's username = "Josh"
+q = Query().delete("User").where("username").equals("Josh")
+```
 
