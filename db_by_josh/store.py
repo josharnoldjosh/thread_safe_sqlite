@@ -1,5 +1,5 @@
-from sqlite3worker import Sqlite3Worker
-from result import Result
+from .sqlite3worker import Sqlite3Worker
+from .result import Result
 
 
 class Database:
