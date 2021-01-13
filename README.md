@@ -15,12 +15,9 @@ Its as easy as:
 First, let's import some modules.
 
 ```python
-from db_by_josh import (
-    schema,
-    store,    
-    query,
-    result,    
-)
+from db_by_josh.schema import Database
+from db_by_josh.schema import Schema, Column
+from db_by_josh.query import Query
 ```
 
 ### Creating a schema
@@ -28,7 +25,7 @@ from db_by_josh import (
 Instead of worrying about doing `CREATE TABLE`, etc, why not just create a schema object? A schema refers to a single database `.sqlite` file.
 
 ```python
-db_schema = schema.Schema("my_database")
+db_schema = Schema("my_database")
 ```
 
 ### Adding a table
@@ -36,9 +33,9 @@ db_schema = schema.Schema("my_database")
 Now, let's add a table to our schema. Let's create a `User` table with two columns:
 
 ```python
-users = schema.Table("User")
-users.add_column("username", schema.Column.TEXT)
-users.add_column("password", schema.Column.TEXT)
+users = Table("User")
+users.add_column("username", Column.TEXT)
+users.add_column("password", Column.TEXT)
 db_schema.add_table(users) # Don't forget to add your table to your schema
 ```
 
@@ -47,7 +44,7 @@ db_schema.add_table(users) # Don't forget to add your table to your schema
 It's as easy as:
 
 ```python
-db = store.Database(db_schema)
+db = Database(db_schema)
 ```
 
 ### What about adding data?
@@ -66,7 +63,7 @@ Queries are in SQL are now fun.
 First, you're going to want to define a query using this chain-notation.
 
 ```python
-q = query.Query().select("User").where("username").equals("Josh")
+q = Query().select("User").where("username").equals("Josh")
 ```
 
 Just call `.query` on your database reference and pass in your previously defined query, and voila, results!
