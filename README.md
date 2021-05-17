@@ -58,7 +58,7 @@ db.insert_into("User",
 
 ### Queries, Queries, Queries.
 
-Queries are in SQL are now fun.
+Queries in SQL are now fun.
 
 First, you're going to want to define a query using this chain-notation.
 
