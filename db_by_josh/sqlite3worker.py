@@ -152,9 +152,7 @@ class Sqlite3Worker(threading.Thread):
         delay = .001
         while True:
             if token in self.results:
-                return_val = self.results[token]
-                del self.results[token]
-                return return_val
+                return self.results.pop(token)
             # Double back on the delay to a max of 8 seconds.  This prevents
             # a long lived select statement from trashing the CPU with this
             # infinite loop as it's waiting for the query results.
